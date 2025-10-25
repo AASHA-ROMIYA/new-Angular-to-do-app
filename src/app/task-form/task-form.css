@@ -1,0 +1,9 @@
+.container-row input{
+    width:90%;
+    margin-right:10px;
+    height: 50px;
+}
+.container-row{
+    display:flex;
+    align-items: center;
+}

@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container" style="margin-top: 20px;">
   <div class="card-row">
     <div class="card-header">
-      <h3>{{title()}}</h3>
+      <h3 style="text-align: center;color: blueviolet;">{{title()}}</h3>
     </div>
     <div class="card-body">
       <app-task-form [taskList]="taskList"></app-task-form>
@@ -10,8 +10,8 @@
       
       <app-task-list [taskList]="taskList">
 
-        <h2 *ngIf="taskList.length">My current Tasks {{taskList.length}}</h2>
-        <h2 *ngIf="!taskList.length">No Task Created...</h2>
+        <h2 *ngIf="taskList.length" style="text-align: center;margin: 10px;">My current Tasks {{taskList.length}}</h2>
+        <h2 *ngIf="!taskList.length" style="text-align: center;margin: 10px;">No Task Created...</h2>
       </app-task-list>
     </div>
   </div>
