@@ -1,0 +1,22 @@
+<ng-content></ng-content>
+
+<input type="text"
+       placeholder="search tasks"
+       [(ngModel)]="searchText"
+       class="form-control">
+
+<ul>
+  <li class="task"
+      *ngFor="let task of taskList | filterPipe: searchText; let i = index">
+      
+    <input type="checkbox" [(ngModel)]="task.done">
+    
+    <p [style.text-decoration]="task.done ? 'line-through' : 'none'">
+      {{ task.name }}
+    </p>
+    
+
+    <button class="btn btn-danger btn-sm my-3"
+            (click)="removeTask(i)">Delete</button>
+  </li>
+</ul>
